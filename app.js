@@ -16,11 +16,6 @@ for (let i = 0; i < 25; i++) {
   arr.push(i + 1);
 }
 
-for (let i = 0; i < 25; i++) {
-  let j = (Math.random() * 100) % 24;
-  let temp = arr.splice(j, 1);
-  arr.push(temp);
-}
 
 function getUserName() {
   let usr = prompt("Yay,  New Highscore!!! Enter Your Name", "Player");
@@ -88,7 +83,14 @@ function resultBox(elapsedTime) {
 let t1, t2, t3;
 
 function gridGenerator() {
+  //Randomizing Numbers
+  for (let i = 0; i < 25; i++) {
+    let j = (Math.random() * 100) % 24;
+    let temp = arr.splice(j, 1);
+    arr.push(temp);
+  }
   wrap.className = '.wrapper';
+
 
   wrap.textContent = '\n\n\n                  3';
 
@@ -180,6 +182,7 @@ wrap.addEventListener('click', function (e) {
     close.textContent = 'Close';
     close.classList.add('close');
     wrap.appendChild(close);
+    bestTime.textContent = 'Best : 0';
 
   }
 });
