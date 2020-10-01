@@ -109,6 +109,10 @@ html {
   margin-left: 3px;
 }
 
+#highscore:hover,#NewGame:hover,.elements:hover{
+  cursor:pointer;
+}
+
 #NewGame {
   font-family: bungee;
   font-size: 14px;
@@ -185,6 +189,10 @@ html {
   text-align: center;
   font-size: 50px;
 
+}
+
+.elements:active{
+  background-color:#fdceee;
 }
 
 .score {
